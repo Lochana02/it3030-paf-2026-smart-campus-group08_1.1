@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -118,4 +118,29 @@ function App() {
   )
 }
 
-export default App
+export default App ;
+*/
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Dashboard from "./pages/Dashboard";
+import AddResource from "./pages/AddResource";
+import Resources from "./pages/Resources";
+import UserResources from "./pages/UserResources";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="add" element={<AddResource />} />
+          <Route path="resources" element={<Resources />} />
+          <Route path="/user/resources" element={<UserResources />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
