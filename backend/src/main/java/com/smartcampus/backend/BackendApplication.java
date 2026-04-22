@@ -9,7 +9,7 @@ public class BackendApplication {
         SpringApplication.run(BackendApplication.class, args);
         System.out.println("╔════════════════════════════════════════╗");
         System.out.println("║   🚀 Smart Campus Backend Started      ║");
-        System.out.println("║   📍 http://localhost:8080             ║");
+        System.out.println("║   📍 http://localhost:8081             ║");
         System.out.println("║   🗄️  MongoDB: smartcampus             ║");
         System.out.println("╚════════════════════════════════════════╝");
     }
